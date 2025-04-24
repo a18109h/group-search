@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>班番号検索</title>
+</head>
+<body>
+    <h1>班番号検索</h1>
+    <label for="student-id">学籍番号を入力してください<br>※ahは小文字半半角、数字も半角です。<br>(例)ah12345:</label>
+    <input type="text" id="student-id">
+    <button onclick="searchGroup()">検索</button>
+    <p id="result" style="font-size: 40px; font-weight: bold;"></p>
+
+
+    <script>
+        const groupData = {
+            "ah25074": "1班",
+"ah25108": "1班",
+ "ah25111": "1班",
+ "ah25083": "1班",
+ "ah25024": "1班",
+ "ah25094": "1班", 
+"ah25029": "1班",
+ "ah25093": "1班",
+ "ah24089": "1班", 
+"ah24032": "1班",
+
+            "ah25097": "2班",
+"ah25037": "2班",
+"ah25076": "2班",
+"ah25011": "2班",
+"ah25005": "2班",
+"ah25046": "2班",
+"ah25110": "2班",
+"ah25113": "2班",
+"ah25119": "2班",
+"ah25079": "2班",
+
+            "ah25043": "3班",
+"ah25078": "3班",
+"ah25117": "3班",
+"ah25085": "3班",
+"ah25106": "3班",
+"ah25088": "3班",
+"ah25090": "3班",
+"ah25084": "3班",
+"ah25107": "3班",
+	
+	"ah25054": "4班",
+"ah25012": "4班",
+"ah25014": "4班",
+"ah25013": "4班",
+"ah25021": "4班",
+"ah25092": "4班",
+"ah25081": "4班",
+"ah25086": "4班",
+"ah25008": "4班",
+
+	"ah25091": "5班",
+"ah25045": "5班",
+"ah25048": "5班",
+"ah25089": "5班",
+"ah25063": "5班",
+"ah25080": "5班",
+"ah25072": "5班",
+"ah25122": "5班",
+"ah25121": "5班",
+
+	"ah25066":"6班",
+"ah25087":"6班",
+"ah25068":"6班",
+"ah25015":"6班",
+"ah25095":"6班",
+"ah25114":"6班",
+"ah25077":"6班",
+"ah25033":"6班",
+"ah25034":"6班",
+"ah25028":"6班",
+
+"ah25073":"7班",
+"ah25047":"7班",
+"ah25004":"7班",
+"ah25098":"7班",
+"ah25055":"7班",
+"ah25039":"7班",
+"ah25050":"7班",
+"ah25064":"7班",
+"ah25071":"7班",
+"ah25053":"7班",
+        };
+
+        function searchGroup() {
+            const studentId = document.getElementById("student-id").value;
+            const result = groupData[studentId] || "該当する班がありません";
+            document.getElementById("result").textContent = result;
+        }
+    </script>
+</body>
+</html>
+
+
